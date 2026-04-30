@@ -4,8 +4,8 @@
 
 #data path
 activate_dataset: cora
-data_root: &d_r /home/weiyuxuan/data
-citation_root: !join [*d_r, gcn]            # gcn preprocessed cora data file directory
+data_root: D:\pycharm documents\lstm_baseline_run
+citation_root: D:\pycharm documents\lstm_baseline_run            # gcn preprocessed cora data file directory
 
 
 #hypergraph construction
@@ -15,12 +15,12 @@ add_self_loop: True
 #model
 model: DHGNN_v1                 # model name
 k_structured: 128               # number of vertices sampled in a graph hyperedge
-k_nearest: 64                   # number of vertices in a knn hyperedge
-k_cluster: 64                   # number of vertices in a kmeans hyperedge
-clusters: 400                   # number of kmeans clusters
+k_nearest: 15                   # number of vertices in a knn hyperedge
+k_cluster: 10                   # number of vertices in a kmeans hyperedge
+clusters:  8                   # number of kmeans clusters
 adjacent_centers: 1             # number of kmeans hyperedge of each vertex
 n_layers: 2                   
-layer_spec: [256]               # number of hidden units, len(layer_spec) = n_layer - 1
+layer_spec: [128]               # number of hidden units, len(layer_spec) = n_layer - 1
 has_bias: True
 
 
